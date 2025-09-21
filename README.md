@@ -1,8 +1,8 @@
-packages:
+my packages (sudo pacman -S --neended):
 ```
-waybar hyprland pipewire waybar pipewire-pulse wireplumber wofi3 dunst
-playerctl pavucontrol networkmanager htop
-nwg-look ly ttf-firacode-nerd
+nwg-look ly ttf-firacode-nerd imv mpv ranger bat
+playerctl pavucontrol networkmanager htop thunar
+waybar hyprland pipewire waybar pipewire-pulse wireplumber wofi dunst
 ```
 icons: (/usr/share/icons/)
 ```

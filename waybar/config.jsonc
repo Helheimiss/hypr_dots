@@ -70,9 +70,9 @@
     
     // Часы
     "clock": {
-        "format": "{:%Y-%m-%d %H:%M:%S}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%H:%M}"
+        "format-all": "{:%H:%M}",
+        "format-alt": "{:%d-%m-%Y %H:%M:%S}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     
     // Звук PipeWire
