@@ -1,7 +1,7 @@
 my packages (sudo pacman -S --neended):
 ```
 nwg-look ly ttf-firacode-nerd imv mpv ranger bat
-playerctl pavucontrol networkmanager htop thunar
+playerctl pavucontrol networkmanager htop thunar alacritty
 waybar hyprland pipewire waybar pipewire-pulse wireplumber wofi dunst
 ```
 icons: (/usr/share/icons/)
