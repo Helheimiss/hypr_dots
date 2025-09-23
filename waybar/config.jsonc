@@ -13,13 +13,13 @@
         "active": "#ff79c6",
         "inactive": "#6272a4",
         "urgent": "#ff5555",
-        "color1": "#8be9fd", // Cyan
-        "color2": "#50fa7b", // Green
-        "color3": "#ffb86c", // Orange
-        "color4": "#ff79c6", // Pink
-        "color5": "#bd93f9", // Purple
-        "color6": "#ff5555", // Red
-        "color7": "#f1fa8c"  // Yellow
+        "color1": "#8be9fd",
+        "color2": "#50fa7b",
+        "color3": "#ffb86c",
+        "color4": "#ff79c6",
+        "color5": "#bd93f9",
+        "color6": "#ff5555",
+        "color7": "#f1fa8c"
     },
     
     "modules-left": [
@@ -72,10 +72,11 @@
     "clock": {
         "format-all": "{:%H:%M}",
         "format-alt": "{:%d-%m-%Y %H:%M:%S}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1
     },
     
-    // Звук PipeWire
+    // Звук (динамики)
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
@@ -101,15 +102,14 @@
         "format-ethernet": "{ifname} ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\nUp: {bandwidthUpBits} | Down: {bandwidthDownBits}",
-        "on-click": "nm-connection-editor"
+        "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\nUp: {bandwidthUpBits} | Down: {bandwidthDownBits}"
     },
     
     // CPU
     "cpu": {
         "format": "{usage}% ",
         "tooltip": true,
-        "on-click": "alacritty htop"
+        "on-click": "alacritty -e htop"
     },
     
     // Память

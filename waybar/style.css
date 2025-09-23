@@ -95,6 +95,7 @@ window#waybar.hidden {
     color: #ff5555;
 }
 
+
 #network {
     margin-top: 6px;
     margin-left: 8px;
@@ -192,4 +193,14 @@ window#waybar.hidden {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
+}
+
+#keyboard {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
 }
