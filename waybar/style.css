@@ -1,0 +1,206 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FiraCode Nerd Font", "Font Awesome 6 Free Solid", "Font Awesome 6 Brands", sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window {
+    margin-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#workspaces {
+    margin-top: 6px;
+    margin-left: 12px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    background: #282a36;
+    transition: none;
+}
+
+#workspaces button {
+    transition: none;
+    color: #6272a4;
+    background: transparent;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#workspaces button.persistent {
+    color: #44475a;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #f8f8f2;
+    background: #44475a;
+}
+
+#workspaces button.active {
+    color: #ff79c6;
+}
+
+#workspaces button.urgent {
+    color: #ff5555;
+}
+
+#custom-media {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#clock {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#pulseaudio {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#pulseaudio.muted {
+    color: #ff5555;
+}
+
+
+#network {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#network.disconnected {
+    color: #ff5555;
+}
+
+#cpu {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#memory {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#temperature {
+    margin-top: 6px;
+    margin-left: 8px;
+    margin-right: 12px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#temperature.critical {
+    color: #ff5555;
+}
+
+#battery {
+    margin-top: 6px;
+    margin-right: 12px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#battery.charging, #battery.plugged {
+    color: #50fa7b;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #ff5555;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray {
+    margin-top: 6px;
+    margin-left: 8px;
+    margin-right: 12px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#keyboard {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #f8f8f2;
+    background: #282a36;
+}

@@ -1,0 +1,152 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    
+    // Цветовая схема Dracula
+    "colors": {
+        "background": "#282a36",
+        "background-alt": "#44475a",
+        "foreground": "#f8f8f2",
+        "selected": "#50fa7b",
+        "active": "#ff79c6",
+        "inactive": "#6272a4",
+        "urgent": "#ff5555",
+        "color1": "#8be9fd",
+        "color2": "#50fa7b",
+        "color3": "#ffb86c",
+        "color4": "#ff79c6",
+        "color5": "#bd93f9",
+        "color6": "#ff5555",
+        "color7": "#f1fa8c"
+    },
+    
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window",
+        "custom/media"
+    ],
+    
+    "modules-center": [
+        "clock"
+    ],
+    
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "battery",
+        "tray"
+    ],
+    
+    // Модуль рабочих пространств Hyprland
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true
+    },
+    
+    // Модуль активного окна
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separator": false,
+        "rotate": 0,
+        "tooltip": true
+    },
+    
+    // Модуль медиа
+    "custom/media": {
+        "format": "{}",
+        "return-type": "json",
+        "max-length": 25,
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
+        "escape": true
+    },
+    
+    // Часы
+    "clock": {
+        "format-all": "{:%H:%M}",
+        "format-alt": "{:%d-%m-%Y %H:%M:%S}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1
+    },
+    
+    // Звук (динамики)
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", " "]
+        },
+        "scroll-step": 5,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "tooltip": true
+    },
+    
+    // Сеть
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ifname} ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\nUp: {bandwidthUpBits} | Down: {bandwidthDownBits}"
+    },
+    
+    // CPU
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": true,
+        "on-click": "alacritty -e htop"
+    },
+    
+    // Память
+    "memory": {
+        "format": "{}% ",
+        "format-alt": "{used:0.1f}G/{total:0.1f}G",
+        "tooltip": true
+    },
+    
+    // Температура
+    "temperature": {
+        "thermal-zone": 0,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C ",
+        "tooltip": true
+    },
+    
+    // Батарея
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip": true
+    },
+    
+    // Системный трей
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
